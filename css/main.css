@@ -4,16 +4,22 @@
 	/*src: url("../font/Sweet Sensations Personal Use.ttf");*/
 }
 
-#test_bs{
+.test_bs{
     background-color:blue;
-    height : 100px;
+    border: solid 1px black;
 }
 
 
 body{
     font-family : "Baskerville Old Face", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
+  
     background-color: rgba(194, 205, 233, 0.541);
+    background-image : url("asset/bg3.jpg"); 
+}
+
+h5{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    font-size : 6vw;
 }
 
 ul{
@@ -22,14 +28,28 @@ ul{
 
 a{
     text-decoration : none;
-    color : black;
+    color : rgb(82, 79, 79);
 }
 
 a:hover{
-    color : white;
+    color : black;
     text-decoration : none;
 }
 
+article{
+    margin : auto;
+    width : 100%;
+    vertical-align: center;
+    font-size : 1.8vw;
+    background-color: white;
+    padding-bottom : 80px;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.6);
+}
+
+section{
+    margin : 0;
+    padding : 0;
+}
 .flex_spaceb{
     display : flex;
     justify-content: space-between;
@@ -38,6 +58,11 @@ a:hover{
 .flex_column{
     display : flex;
     flex-direction: column;
+}
+
+.flex_nowrap{
+    display : flex;
+    flex: nowrap;
 }
 
 .souligne{
@@ -51,7 +76,6 @@ a:hover{
 
 .centre_text{
     text-align : center;
-    margin : auto;
 }
 
 .block{
@@ -63,9 +87,27 @@ em{
     color : rgb(4, 138, 55);
 }
 
+.border{
+    border : solid 1px  black;
+}
+
 .shadowbox{
 
     box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.6);
+}
+
+.inter_article{
+    background-attachment: fixed;
+    height : 400px;
+}
+
+
+.bg1{
+    background: url("asset/background3.jpg") ;
+}
+
+.bg0{
+    background: url("asset/bg3.jpg") ;
 }
 
 /*------------------------------HEADER--------------------------------------------*/
@@ -76,24 +118,30 @@ em{
 }
 
 header{
-    display : flex;
-    flex-wrap : wrap;
-    height : 144px;
+    
+    height : 150px;
     width : 100%;  
     position : absolute;
     /*background: url("../asset/bkg2.jpg");
     background-attachment: fixed;
     background-size : 100%;  */
     z-index: 10;
-    background-color :rgba(0, 0, 0, 0.8);  
+    
+    white-space : nowrap;
+}
+
+header div{
+    background : url("../asset/h3.jpeg"); 
 }
 
 #logo{
-    height : 60%;
-    padding-top : 10px;
+    height : 85px;
+    margin-top : 10px;
+    margin-bottom : 5px;
 
     
 }
+
 
 h1{
    
@@ -101,53 +149,60 @@ h1{
     font-family: "Font Titre", "Baskerville Old Face";
     padding-top : 25px;
     margin-left : 20px;
-    color : rgb(61, 121, 43);
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-    width : 60%;
+    white-space : nowrap;
+    overflow: hidden;
+    font-size : 3em;
+    
+	text-shadow: -3px 0 1px rgba(0,0,0,0.3);
+}
+
+#clipped-title1 {
+	background: url(../asset/t1.jpg) no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 }
 
 
-#navsite{
+
+#op-horizontalnav{
     width:100%;
 }
 
-#navsite ul {
+#op-horizontalnav ul {
     display : flex;
     margin: 0px;
     padding : 0;
     padding-left :10px;
     height : 50px;
     line-height: 50px; /* hauteur de ligne (identique) */
-    white-space: nowrap; /* interdiction de passer à la ligne */
+    flex-wrap: wrap; /* interdiction de passer à la ligne */
     border-radius : 0px;
-    background-color :rgb(35, 126, 80); 
-    z-index:100;
-    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.5);
+    background : url("../asset/h2.jpeg") ;
+    box-shadow: 0px 5px  3px rgba(0, 0, 0, 0.7), 0px -5px  5px rgba(0, 0, 0, 0.7);
+    z-index : 3000;
 }
 
 
-#navsite ul li a{
+#op-horizontalnav ul li a{
     display : inline-block;
     padding-right : 15px;
     padding-left : 15px;
-    font-size : 1.3em;
-    color : rgb(207, 207, 207);
+    font-size : 1.5em;
+    color : rgb(223, 221, 221);
     margin: 0;
-    text-shadow: 1px 2px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
     position: relative;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Font Titre", "Baskerville Old Face";}
 
-.degrade {
-    font-size: 55px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgb(9, 255, 0)), to(rgb(255, 255, 255)));
-   /* background: -webkit-gradient(linear, left top, left bottom, from(rgb(24, 18, 18)), to(rgb(255, 255, 255)));*/
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-#navsite ul li a:hover{
+
+#op-horizontalnav ul li a:hover{
     color: white;
+    
+    
     
     /*text-shadow: 0px 0px rgb(0, 0, 0);
     transition-property: text-shadow;
@@ -155,108 +210,72 @@ h1{
     transition-timing-fonction: linear;*/
 }
 
-.nav_onscreenb{
+.nav_onscreen{
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.nav_onscreent{
+.nav_onscreen span{
+    
     color : white;
 }
 
 
+.topnav .icon {
+    display: none;
+  }
 
+@media screen and (max-width: 650px) {
+
+    .topnav li{
+      display: none;
+    }
+
+    .topnav a.icon {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .topnav.responsive ul{
+        position: relative;
+        display : block;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      margin : auto;
+      margin-left : 50%;
+    }
+    .topnav.responsive li {
+      display: block;
+      position: relative;
+      float : left;
+      text-align: left;
+    }
+    
+  }
 /*------------------------------ MAIN --------------------------------------------*/
 /*------------------------SLIDER-----------------------*/
 #slider_accueil{
     margin : auto;
     width : 100%;
     height : 100%;
+    padding-top : 150px;
 }
 
-.overflow{
+#slider_accueil img{
+    max-height : 550px;
+}
+
+#s_caption2{
+}
+#s_caption1{
     
-    height : 700px;
-    overflow:hidden;
-    text-align : center;
-    vertical-align : middle;
 }
-
-.overflow_h{
-    overflow : hidden;
-}
-
-.position_image{
-    position : absolute;
-}
-
-.bkposition{
-    position : absolute;
-    top:-100px;
-}
-
-#slider_accueil h5 span{
-   /* background-color: rgba(0, 0, 0, 0.5);*/
-   
-    font-size : 5vw;
-    padding : 5px;
-    border-radius: 2px;
-    position : relative;
-    font-family: "Font Titre", "Baskerville Old Face";
-    
-    animation-name: example;
-    animation-duration: 8s;
-}
-
-@keyframes example {
-    from {color: rgba(255, 255, 255, 0);
-        text-shadow: 4px 2px rgba(0, 0, 0, 0);}
-    to {color: rgba(255, 255, 255, 1);
-        text-shadow: 3px 2px rgba(0, 0, 0, 1);}
-}
-
-#slider_accueil .caption1_slide1
-{
-    position : relative;
-    left:-250px;
-    top: -350px;
-}
-
-#slider_accueil .caption1_slide2
-{
-    position : relative;
-    left:-00px;
-    top: -30px;
-}
-
-#slider_accueil .caption2_slide2
-{
-    position : relative;
-    top: -30px;
-    left : -00px;
-    animation-duration: 8s;
-}
-
-#slider_accueil .caption1_slide3
-{
-    position : relative;
-    left : -0px;
-    top : -300px;
-    font-size : 6vw;
-}
-
 
 
 
 /*------------------------ACTU-----------------------*/
-#actu_accueil{
-    margin : auto;
-    margin-top : 100px;
-    width : 100%;
-    vertical-align: center;
-    font-size : 1.8vw;
-    background-color: white;
-    padding : 0;
-}
+
 
 h3{
     height : 150px;
@@ -264,115 +283,145 @@ h3{
     font-size : 2em;
 }
 
-
-.actu_macaron{
-    border : solid 1px black;
-}
-
-.border{
-    border : solid 1px  black;
-}
-/*
-#actu_accueil ul{
-    border: solid 1px  black;
-}
-
-
-
-#actu_accueil li{
-}
-
-#actu_accueil a{
-    display : block;
-    display : flex;
-    justify-content: space-between;
-    height : 300px;
-    width : 100%;
-    background-color :white;  
-}
-
-#actu_accueil a:hover{
-    background-color :rgba(0, 0, 0, 0.3);  
-    border : solid 1px white;
-}
-
-
-.content{
-    display: table-cell;
-    vertical-align: middle;
-    margin-left : 10px;
-}
-
-#actu_accueil a div{
-    height : 100%;
-    width : 50%;
-}
-
-#actu_accueil a img{
-    width : 100%;
-    opacity : 0.9;
-}
-
-#actu_accueil ul a:hover img{
-    opacity : 1;
-}
-
-.date{
-    color : gray;
-    font-size : 0.8em;
-}
-
-#image_actu{
-    width : 200px;
-    height : 200px;
-    background-color : white;
-    border : solid 1px black;
-    border-left : solid 2px black;
-}*/
-
-/*------------------------ASTUCE-----------------------*/
-
-/*------------------------------ FOOTER --------------------------------------------*/
-
-footer{
-    width : 100%;
-    display : flex;
-    border-top : solid 1px black;
-    margin-top : 150px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color : white;
+#actu_blocs
+{
     
 }
 
-footer ul{
-    width : 500px;
-    margin : auto;
+
+
+#actu_archive{
+    border-left : solid 1px rgba(161, 161, 161, 1);;
 }
 
-footer img{
-    width : 50px;
-    height : 50px;
+/*------------------------ASTUCE-----------------------*/
+
+
+/*------------------------INFO pratiques-----------------------*/
+.info_contact{
+    padding : 10px;
+}
+
+.info_contact div{
+    padding : 0px;
+    margin : 0;
 }
 
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
+.img_ets {
+    padding : 0px;
+}
+.img_ets img{
+    max-width : 100%;
+    height : 150px;
+}
+.info_ets ul{
+    padding-left : 20px;
+}
+
+/*------------------------------ FOOTER --------------------------------------------*/
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section#footer {
+    padding: 60px 0;
+}
+
+section .section-title {
     text-align: center;
-    text-decoration: none;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #007b5e !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
 }
 
-/* Add a hover effect if you want */
-.fa:hover {
-    opacity: 0.7;
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
 }
 
-/* Set a specific color for each brand */
 
-/* Facebook */
-.fa-facebook {
-    background: #3B5998;
-    color: white;
+
+
+.bg_rose{
+    background: pink;
+}
+
+
+/*     RESPONSIVE      max 600px   */
+
+@media only screen and (max-width: 650px) {
+    
+    .r_hidden {
+        display : none;
+    }
+
+    .r_justify{
+        justify-content: center;
+    }
+
+    .r_add_top{
+        top : 150px;
+    }
+
+    .r_header_bgcolor{
+    }
+
 }
 

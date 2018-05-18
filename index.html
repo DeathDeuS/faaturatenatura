@@ -6,229 +6,464 @@
         <title>Ma page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+     <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ma page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="js/jquery.js" ></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/sticky.min.js"></script>
+        
         <script>
             var sticky = new Sticky('.selector');
         </script>
+        <script>
+                $(function() {
+        // This will select everything with the class smoothScroll
+        // This should prevent problems with carousel, scrollspy, etc...
+        $('.smoothScroll').click(function() {
+          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=" + this.hash.slice(1) + "]');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 10000); // The number here represents the speed of the scroll in milliseconds
+              return false;
+            }
+          }
+        });
+      });
+      
+      // Change the speed to whatever you want
+      // Personally i think 1000 is too much
+      // Try 800 or below, it seems not too much but it will make a difference
+              </script>
         
         <script>
             $(document).ready(function(){
             $('.carousel').carousel({interval: 5000, pause: false});
             })
         </script>
+    <style>
+  
+    
+    </style>
+        
         
     </head>
 
-    <body data-sticky-container> 
+    <body data-sticky-container>
+        
+        
         <!------------------------------HEADER ------------------------------------>
-       <!-- <div id="cadre_accueil">-->
-           <!-- <header>
-                <img id="logo" src="asset/world.svg" alt="logo1.png" >
-                <div class="flex_spaceb flex_column w-100">
-                    <h1 class="degrade">FA'ATURA TE NATURA</h1>
-                    <nav id="navsite" class="selector">
-                        <ul>
-                            <li class="one" ><a class="" href="index.html">Accueil</a></li>
-                            <li class="two"><a class=""href="blog.html">Glossaire</a></li>
-                            <li class="three"><a class=""href="projets.html">Projets</a></li>
-                            <li class="four"><a class=""href="projets.html">Contact</a></li>
-                            <hr/>
-                        </ul>
-                    </nav>
+        <header>
+
+            <div class="flex_nowrap r_justify r_header_bgcolor ">
+                <img id="logo" src="asset/world.svg" alt="logo1.png" class="r_hidden">                    
+                <div id="clipped-title1">
+                    <h1 class="degrade ">FA'ATURA TE NATURA</h1>
                 </div>
-            </header>-->
-            <header>
-                    <img id="logo" src="asset/world.svg" alt="logo1.png" >
-                   
-                     <h1 class="degrade">FA'ATURA TE NATURA</h1>
-                        
-             <!------------------------------NAV ------------------------------------>
-                    <nav id="navsite" class="selector">
-                            <ul>
-                                <li class="one" ><a class="nav_onscreenb" href="index.html"><span class="nav_onscreent">Accueil</span></a></li>
-                                <li class="two"><a class=""href="blog.html">Glossaire</a></li>
-                                <li class="three"><a class=""href="projets.html">Projets</a></li>
-                                <li class="four"><a class=""href="projets.html">Contact</a></li>
-                            </ul>
-                            
-                        </nav>
-                </header>
+            </div>    
+
+                                 <!--------------------NAV -------------------------->
+            <nav id="op-horizontalnav" class="selector topnav">
+                <div class="container-fluid" style="padding : 0;">
+                <ul class="op-sectionlist">
+                    <li class="op-v-item" ><a class=" op-v-link nav_onscreen smoothScroll" href="index.html"><span class="smoothScroll">Accueil</span></a></li>
+                    <li class="op-v-item" ><a class="op-v-link smoothScroll" href="#actu_accueil"><span class="smoothScroll">Actualité</span></a></li>
+                    <li class="op-v-item" ><a class="op-v-link smoothScroll" href="#info_prat"><span class="smoothScroll">Infos pratiques</span></a></li>
+                    <li class="op-v-item" ><a class="op-v-link smoothScroll" href="glossaire.html"><span class="smoothScroll">Glossaire</span></a></li>
+                    <li class="op-v-item"><a class="op-v-link smoothScroll"href="projets.html"><span class="">Projets</span></a></li>
+                    <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction1()">&#9776;</a>
+                </ul> 
+            </div>
+            </nav> 
+
+
+        </header>
 
        
        
 
 
         <!------------------------------ SLIDER ------------------------------------>
-            <div id="slider_accueil" class="shadowbox">
-                <!-- a faire au début : définir largeur-hauteur -->
-                <!-- A faire à la fin : photo (3?), texte,lien, navigation -->
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div  class="overflow"><img class="d-block w-100 position_image" src="asset/bkg2.jpg" alt="First slide"></div>
-                        <div class="carousel-caption d-none d-md-block">
-                                <h5 ><span class="caption1_slide1">Notre planète nous a <em>accueilli</em></span></h5>
-                                <p></p>
-                            </div>
-                    </div>
-                    <div class="carousel-item">
-                            <div  class="overflow"> <img class="d-block w-100 position_image" src="asset/saveplanet2.jpg" alt="Second slide"></div>
-                        <div class="carousel-caption d-none d-md-block">
-                                <h5 ><span class="caption1_slide2">elle nous <em>nourrit</em></span><span class="caption2_slide2">et nous <em>abreuve</em></span></h5>
-                                <p></p>
-                            </div>
-                    </div>
-                    <div class="carousel-item">
-                            <div class="overflow"><img class="d-block w-100 bkposition" src="asset/fish1.jpg" alt="Third slide"></div>
-                        <div class="carousel-caption d-none d-md-block">
-                                <h5 class=""><span class="caption1_slide3">alors <em>préservons</em> là </span> </h5>
-                                <p></p>
-                            </div>
-                    </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
+        <section class="current"> 
+        <div id="slider_accueil" >
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade shadowbox" data-ride="carousel" style="margin-top :-20px;">
+               <!--  <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol> -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="asset/s1.jpg" alt="First slide" >
+                    <div class="carousel-caption d-none d-md-block">
+                            <h5 id="s_caption1">Notre planète nous a accueilli</h5>
+                          </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="asset/s2.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                            <h5 id="s_caption2">elle nous nourrit et nous abreuve</h5>
+                          </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="asset/s3.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                            <h5 id="s_caption3">alors préservons là</h5>
+                          </div>
+                  </div>
                 </div>
-                    
-            </div>
-
-       <!-- </div>-->
-        <!------------------------------ ACTU ------------------------------------>
-        <!--liens à insérer + mise en forme date et titre lien page-->
-
-
-
-        <article id="actu_accueil" class="flex_column shadowbox" >
-                <h3 class="centre_text" >Actualités</h3>
-             <div class="container"  >
-                <div class="row" >
-                        
-                        <div class="col-6"   >
-                            <div >
-                                <img src="asset/poisson.jpg" alt="mail" style="width : 100%; max-height : 300px;" class="img-responsive"/>
-                            </div>
-                            <div class="mx-auto">
-                                <p><span class="date">25/04/2018 </span><br/> <u>Glossaire</u> : Fiumeimoa Mépadodam -Poisson endemique de Tahiti...</p>
-                            </div>                            
-                        </div>
-
-                        <div class="col-6" >
-                            <div>
-                                <img src="asset/loi.jpg" alt="mail"  style="width : 100%;  max-height : 300px;" class="img-responsive"/>
-                            </div>
-                            <div>
-                                <p><span class="date">20/04/2018 </span><br/> <u>Infos pratiques</u> : Nouveau texte de loi applicable en Polynésie...</p>
-                            </div>                            
-                        </div>
-                </div>
-                <div class="row">
-                      <div class="col-2"></div>
-                      <div class="w-100 h-25"></div>
-                      <div class="col-2"></div>
-                        <div class="col-3 form-control" ><img src="asset/poisson.jpg" alt="mail" style="height : 250px;overflow:hidden"/></div>
-                        <div class="col-2"></div>
-                        <div class="col-3"  ><img src="asset/loi.jpg" alt="mail" style="height : 250px;overflow:hidden"/></div>
-                        <div class="col-2"></div>
-                        <div class="w-100"></div>
-                        <div class="col-2"></div>
-                        <div class="col"><div class="content">
-                                <p><span class="date">25/04/2018 </span><br/> <u>Glossaire</u> : Fiumeimoa Mépadodam -Poisson endemique de Tahiti...</p>
-                        </div></div>
-                        <div class="col-2"></div>
-                        <div class="col"><div class="content">
-                                <p><span class="date">20/04/2018 </span><br/> <u>Infos pratiques</u> : Nouveau texte de loi applicable en Polynésie...</p>
-                            </div></div>
-                      </div>
-                    </div>
-                <!--
-                <ul class="no_marg_pad">
-                    <li><a href=""> 
-                        <div class="content">
-                                <p><span class="date">25/04/2018 </span><br/> <u>Glossaire</u> : Fiumeimoa Mépadodam -Poisson endemique de Tahiti...</p>
-                        </div>
-                        <div class="overflow_h"><img src="asset/poisson.jpg" alt="mail"/></div>
-                    </a></li>
-                    <li><a href="">
-                            <div class="content">
-                                <p><span class="date">20/04/2018 </span><br/> <u>Infos pratiques</u> : Nouveau texte de loi applicable en Polynésie...</p>
-                            </div>
-                            <div class="overflow_h"><img src="asset/loi.jpg" alt="mail"/></div>
-                        </a></li>
-                    <li><a href="">
-                            <div class="content">
-                                    <p><span class="date">12/03/2018</span>  <br/> <u>Glossaire</u> : Découverte d'une nouvelle espèce de tortue à 2 têtes...</p>
-                            </div>
-                            <div class="overflow_h"><img src="asset/tortue.jpg" alt="mail"/></div>
-                        </a></li>
-                   
-                </ul>
--->
-
-
-                
-
-       <!-- <article id="actu_accueil" class="flex_column" >
-            <h3 class="centre_text" >Actualités</h3>
-            <ul class="no_marg_pad" >
-                <li><a href=""> 
-                    <div class="content">
-                        25/04/2018 - Blog : Fiumeimoa Mépadodam -Poisson endemique de Tahiti...
-                    </div>
-                    <div class="overflow_h"><img src="asset/poisson.jpg" alt="mail"/></div>
-                </a></li>
-                <li><a href="">
-                        <div class="content">
-                            20/04/2018 - Infos pratiques : Nouveau texte de loi applicable en Polynésie...
-                        </div>
-                        <div class="overflow_h"<img src="asset/.png" alt="mail"/></div>
-                    </a></li>
-                <li><a href="">
-                        <div class="content">
-                            12/03/2018  -Blog : Découverte d'une nouvelle espèce de tortue à 2 têtes...
-                        </div>
-                        <div class="overflow_h"><img src="asset/tortue.jpg" alt="mail"/></div>
-                    </a></li>
                
-            </ul>
+              </div>
+            </div>
+        </section>
 
-        -->
+
+
+
+        <!------------------------------ ACTU ------------------------------------>
+        
+
+    
+        
+        <section>
+        <article id="actu_accueil" class="flex_column shadowbox " >
+            <h3 class="centre_text" >Actualités</h3><hr/>
+             <div class="container"  ><!--contient le bloc actu+archives-->
+                <div class="row" > 
+                    <div id="actu_blocs" class="col-xs-12 col-sm-8 col-md-10 "> <!--DEBUT row 1 : bloc actu-->
+                        <div class="row" > <!--debut row 2-->
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a href="http://">
+                                    <img src="asset/missing-image.png" alt="" class="img-thumbnail">
+                                    <div class="caption">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a href="toto">
+                                    <img src="asset/missing-image.png" alt="" class="img-thumbnail">
+                                    <div class="caption">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a href="toto">
+                                    <img src="asset/missing-image.png" alt="" class="img-thumbnail">
+                                    <div class="caption">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a href="toto">
+                                    <img src="asset/missing-image.png" alt="" class="img-thumbnail">
+                                    <div class="caption">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a href="toto"> 
+                                    <img src="asset/missing-image.png" alt="" class="img-thumbnail">
+                                    <div class="caption">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a href="toto">
+                                    <img src="asset/missing-image.png" alt="" class="img-thumbnail">
+                                    <div class="caption">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div> <!--fin row 2-->
+                    </div> <!--FIN row 1 : bloc actu-->
+                    <div id="actu_archive" class="col-xs-12 col-sm-4 col-md-2 "> 
+                        <h4 class="text-center">Archives </h4>
+                        
+                        <ul class="text-justify p-0">
+                            <li class="text-center "><a href="">Archive1</a></li>
+                            <li class="text-center"><a href="">Archive2</a></li>
+                            <li class="text-center"><a href="">Archive3</a></li>
+                            <li class="text-center"><a href="">Archive4</a></li>
+                            <li class="text-center"><a href="">Archive5</a></li>
+                            <li class="text-center"><a href="">Archive6</a></li>
+                            <li class="text-center"><a href="">Archive7</a></li>
+                            <li class="text-center"><a href="">Archive8</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </article>
+    </section>
+
+        <div class="inter_article bg1" style="background: url('asset/slide4.jpg');background-attachment: fixed; background-position: center;">
+
+        </div>
+
+      
+
+    <section>
+        <article>
+                <h3 class="centre_text" >Astuce de la semaine</h3>
+                <div class="embed-responsive embed-responsive-4by3 m-auto col-md-4" >
+                        <iframe class="embed-responsive-item " src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                      </div>
+        </article>       
+    </section> 
+
+        <div class="inter_article bg1" style="background: url('asset/bkg5.jpg');background-attachment: fixed; background-position: center;">
+
+        </div>
+
+
+
+           <section>            
+        <article id="info_prat">
+                <h3 class="centre_text" >Infos pratiques</h3>
+                <div class="container">
+                <div class="row">
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12  centre_text">
+                            Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-5 img_ets "><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-7 info_ets container ">
+                                <ul>
+                                        <li class="">Site web :</li>
+                                        <li>Tel : </li>
+                                        <li>Mail :</li>
+                                        <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12 centre_text">
+                                Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-4 img_ets"><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-8 info_ets container">
+                                <ul>
+                                        <li>Site web :</li>
+                                        <li>Tel : </li>
+                                        <li>Mail :</li>
+                                        <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12 centre_text">
+                                Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-4 img_ets"><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-8 info_ets container">
+                                <ul>
+                                        <li>Site web :</li>
+                                        <li>Tel : </li>
+                                        <li>Mail :</li>
+                                        <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12 centre_text">
+                                Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-4 img_ets"><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-8 info_ets container">
+                                <ul>
+                                        <li>Site web :</li>
+                                        <li>Tel : </li>
+                                        <li>Mail :</li>
+                                        <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12 centre_text">
+                                Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-4 img_ets"><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-8 info_ets container">
+                                <ul>
+                                        <li>Site web :</li>
+                                        <li>Tel : </li>
+                                        <li>Mail :</li>
+                                        <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12 centre_text">
+                                Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-4 img_ets"><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-8 info_ets container">
+                                <ul>
+                                        <li>Site web :</li>
+                                        <li>Tel : </li>
+                                        <li>Mail :</li>
+                                        <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12 centre_text">
+                                Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-4 img_ets"><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-8 info_ets container">
+                                <ul>
+                                        <li>Site web :</li>
+                                        <li>Tel : </li>
+                                        <li>Mail :</li>
+                                        <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_contact col-sm-6 col-md-6 col-xs-12">
+                        <div class="nom_ets row col-12 centre_text">
+                                Nom établissement/association/administration
+                        </div>
+                        <div class="row col-12 border">
+                            <div class="col-4 img_ets"><img src="asset/missing-image.png" alt="" class=""></div>
+                            <div class="col-8 info_ets container">
+                                <ul>
+                                    <li>Site web :</li>
+                                    <li>Tel : </li>
+                                    <li>Mail :</li>
+                                    <li>Adresse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>    
+        </article>   
+    </section>     
+        
 
 
        
         <!------------------------------ FOOTER ------------------------------------>
-        <footer>
-            <p>
-                <h4>Contact : </h4> 
-                <!--- <ul class="flex_spaceb">
-                    <li><img src="asset/icone_gmail.png" alt="mail"/>  </li>
-                    <li><img src="asset/.png" alt="tel" />  </li>
-                    <li><img src="asset/icone_fb.png" alt="facebook"/> </li>
-                </ul>--->
-                <!-- Add font awesome icons -->
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-                
-            </p>
-        </footer>
         
+        <section id="footer">
+            <div class="container">
+                <div class="row text-center text-xs-center text-sm-left text-md-left">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <h5>Plan du sites</h5>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="index.html"><i class="fa fa-angle-double-right"></i>Accueil</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Actualité</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Infos pratiques</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Glossaire</a></li>                            
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Projets</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <h5>Liens utiles</h5>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Contact</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Termes et conditions d'utilisation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                        <ul class="list-unstyled list-inline social text-center">
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                    </hr>
+                </div>	
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                        <p>Media corporation, Polynésie Française &copy All right Reversed. 2018</p></div>
+                    </hr>
+                </div>	
+            </div>
+        </section>
 
+
+
+<!------------------------------ SCRIPT ------------------------------------>
+
+        <script>
+
+                let x = document.getElementsByClassName("mySlides");
+                x[0].style.display = "none";
+                x[1].style.display = "none";
+        </script>
+
+        <script>
+        /* ====== add class on pagination if the section is visible ====== */
+        $(document).scroll(function() {
+        var cutoff = $(window).scrollTop() + 200; // on défini la position de déclenchement (*1)
+        // Find current section and highlight nav menu
+        var curSec = $.find('.current'); // on cherche l'élément (section) avec la class current
+        var curID = $(curSec).attr('id'); // on récupère son ID
+        var curNav = $.find('a[href=#'+curID+']'); // on cherche l'élément de navigation correspondant (*2)
+        $('li .op-v-link').removeClass('nav_onscreen'); // on nettoie la navigation de la class active présente
+        $(curNav).addClass('nav_onscreen'); // (*2) -> on ajoute la class active
+        $('section').each(function(){
+        if($(this).offset().top + $(this).height() > cutoff){ // si la section est dans le champ de scroll
+        $('section').removeClass('current') // on nettoie les sections de la class current présente
+        $(this).addClass('current'); // on ajoute la class current à la section visible
+        return false; // on stoppe l’itération (le cas contraire, seule la derniere section se verra ajouter la class)
+        }
+        });
+        });
+        </script>
+
+    <script>
+        function myFunction1() {
+            var x = document.getElementById("op-horizontalnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        </script>
     </body>
 
 </html>
+
+        
+  
