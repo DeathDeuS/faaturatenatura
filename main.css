@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @font-face {
+	font-family: "Font Titre";
+	/*src: url("../font/Sweet Sensations Personal Use.ttf");*/
 }
 
 .test_bs{
@@ -229,7 +231,7 @@ h1{
         float : right;
       display: block;
   }
-}
+
   /*------- .responsive ajouté via JS -----------*/
   
   @media screen and (max-width: 650px) {
@@ -268,7 +270,11 @@ h1{
     max-height : 550px;
 } 
 
-
+#s_caption2{
+}
+#s_caption1{
+    
+}
 
 
 
@@ -281,7 +287,10 @@ h3{
     font-size : 2em;
 }
 
-
+#actu_blocs
+{
+    
+}
 
 
 
@@ -415,10 +424,13 @@ section .section-title {
         top : 150px;
     }
 
-   
+    .r_header_bgcolor{
+    }
    
     h1{
         font-size : 1.8em;
         margin : 0px;
     }
+
 }
+
